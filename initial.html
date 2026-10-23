@@ -1,0 +1,20 @@
+#include <iostream>
+#include <vector>
+#include <string>
+#include <algorithm>
+
+int main() {
+    std::vector<std::string> repo_docs;
+    repo_docs.push_back("README.md");
+    repo_docs.push_back("CONTRIBUTING.md");
+    repo_docs.push_back("SECURITY.md");
+
+    std::sort(repo_docs.begin(), repo_docs.end());
+
+    for (const auto& doc : repo_docs) {
+        std::cout << "[*] Found: " << doc << std::endl;
+    }
+
+    std::cout << "[+] Initial scan complete." << std::endl;
+    return 0;
+}
